@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "edu-source-collector"
+version = "0.1.0"
+description = "Private, auditable research collector for official training-institution lists"
+requires-python = ">=3.11"
+dependencies = [
+  "beautifulsoup4>=4.12,<5",
+  "filelock>=3.16,<4",
+  "httpx>=0.28,<0.29",
+  "openpyxl>=3.1,<4",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+edu-collect = "edu_collector.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/edu_collector"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

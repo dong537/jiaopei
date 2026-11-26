@@ -1,0 +1,40 @@
+# User-provided exports and private collector evidence must never be committed.
+/教育/
+/docs/research/【企查查】*.xlsx
+/collector/var/
+/collector/.venv/
+/collector/.pytest_cache/
+/collector/**/__pycache__/
+
+# Derived database built from private 企查查 exports (see scripts/build-gd-db.mjs).
+# Rebuild locally instead of committing: node scripts/build-gd-db.mjs
+/data/gd.db
+/data/gd-public-release.json
+/data/*.db
+/data/*.db-journal
+/data/*.db-wal
+
+# 教育部门白名单原件、收据与解析中间产物（见 scripts/whitelist.mjs）。
+# 原件可能受发布方条款限制，且体积大；本地重建即可，不提交。
+/data/whitelist/
+/data/jiaoyubao/
+/data/socialorg/
+/data/
+
+# Extracted archive metadata, not project source.
+/__MACOSX/
+
+# Local experimental work kept outside the public education-platform source.
+/scripts/jiaoyubao/
+/demo/
+
+# Existing application build outputs and local configuration.
+/node_modules/
+/.next/
+/.playwright-cli/
+/output/
+/demo/node_modules/
+/demo/dist/
+*.tsbuildinfo
+.env*
+!.env.example

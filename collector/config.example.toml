@@ -1,0 +1,17 @@
+# One public Longyan attachment, research-only. This is an operator-chosen
+# conservative interval, not a website guarantee or permission to recrawl.
+[longyan]
+min_interval_seconds = 30.0
+timeout_seconds = 20.0
+max_retries = 0
+research_only = true
+production_schedule_enabled = false
+
+# One internal HTML research sample. The interval is operator-chosen and
+# does not imply permission for recurring scraping or public reuse.
+[jinan]
+min_interval_seconds = 30.0
+timeout_seconds = 20.0
+max_retries = 0
+research_only = true
+production_schedule_enabled = false
